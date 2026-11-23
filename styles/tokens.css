@@ -1,0 +1,39 @@
+:root {
+  /* 色彩系统（继承参考站暖大地档案色系） */
+  --bg-primary: #F5F0E8;          /* 暖米白 / 羊皮纸主背景 */
+  --bg-surface: rgba(255, 255, 255, 0.58); /* 浅色区卡片半透明宣纸面 */
+  --bg-dark: #3D312A;             /* 深焙咖啡棕交替区块背景 */
+  --bg-dark-card: rgba(245, 240, 232, 0.06); /* 深色区内部卡片微亮面 */
+  --bg-img-placeholder: #E8E0D4;  /* 图片容器暖灰底衬 */
+
+  --text-primary: #2C2420;        /* 深炭棕主文字（比纯黑柔和） */
+  --text-muted: #6B5E54;          /* 暖灰褐次要文字 */
+  --text-light: #F5F0E8;          /* 深色区块主文字 */
+  --text-light-muted: rgba(245, 240, 232, 0.72); /* 深色区块次要文字 */
+
+  --accent: #B85C38;              /* 陶土砖红（核心点缀：按钮、标签、高亮线、外链） */
+  --accent-soft: rgba(184, 92, 56, 0.12); /* 胶囊柔底 */
+  --secondary: #4A6741;           /* 苔藓墨绿（启用：求职中绿点、已验证/在线状态徽章） */
+  --border: #D4A373;              /* 暖沙金主边框 */
+  --border-light: rgba(180, 160, 140, 0.32); /* 浅分割线与卡片描边 */
+
+  /* 四字体分工体系（新增等宽字体承载 RTL/FPGA 技术术语） */
+  --font-serif: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+  --font-sans: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-display: 'Playfair Display', 'Noto Serif SC', serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, monospace;
+
+  /* 空间、圆角与阴影 */
+  --container-max: 1180px;
+  --section-pad-y: clamp(80px, 9vw, 120px);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow: 0 4px 24px rgba(44, 36, 32, 0.08);
+  --shadow-lg: 0 14px 40px rgba(44, 36, 32, 0.14);
+
+  /* 动效曲线（偏向干脆有技术感的丝滑减速曲线） */
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 0.25s var(--ease-out-expo);
+  --transition-base: 0.4s var(--ease-out-expo);
+  --transition-page: 0.42s var(--ease-out-expo);
+}
