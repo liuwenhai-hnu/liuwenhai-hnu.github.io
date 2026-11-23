@@ -3,7 +3,17 @@ export const interestsData = {
   enabled: true,
   title: '代码与电路之外',
   items: [
-    { name: '数码与硬件', desc: '喜欢拆解设备背后的工作原理，观察软硬件如何配合。' },
+    {
+      name: '做了一个小森林',
+      desc: '五一做了一个小森林，也写了一点项目记录。',
+      images: [
+        {
+          src: 'assets/images/interests/mini-forest.jpg',
+          alt: '玻璃容器里的微景观，有绿植、苔藓和彩色叶片',
+          caption: '2026 年 5 月 · 小森林',
+        },
+      ],
+    },
     { name: '交互可视化', desc: '做了一个可旋转的晶格实验室，用来理解固体物理里的原胞。' },
   ],
   now: {

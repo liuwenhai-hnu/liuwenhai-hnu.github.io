@@ -33,12 +33,14 @@ export const profileData = {
       { value: "IC×AI", label: "硬件与具身跨界实践" },
       { value: "HFT", label: "金融科技协会副会长" }
     ],
-    /* TODO_BY_GPT: 后续查看用户朋友圈后，挑选 1~3 张自然清爽的照片放入 assets/images/profile/ 并填写下方数组；
-       数组为空时，页面将自动渲染高级「个人工程档案卡」，无需修改 HTML/CSS */
     photos: [
-      // { src: "assets/images/profile/photo-1.jpg", alt: "个人照片1", caption: "简要图注" }
+      {
+        src: "assets/images/profile/great-wall.jpg",
+        alt: "在长城上望向群山的背影",
+        caption: "2026 年 8 月 · 长城"
+      }
     ],
-    photoCaption: ""
+    photoCaption: "2026 年 8 月 · 长城"
   },
   contact: {
     email: "2258351862@hnu.edu.cn",

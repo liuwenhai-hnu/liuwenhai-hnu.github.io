@@ -29,7 +29,7 @@ main.append(
   renderProjects(projectsData, projectCategories, openLightbox),
   renderCommunity(communityData, openLightbox),
 );
-if (interestsData.enabled) main.append(renderInterests(interestsData));
+if (interestsData.enabled) main.append(renderInterests(interestsData, openLightbox));
 if (notesData.enabled && notesData.items.length) main.append(renderNotes(notesData));
 const footer = renderFooter(profileData, siteConfig.year);
 const ids = new Set([...main.children].map(section => section.id).concat(footer.id));

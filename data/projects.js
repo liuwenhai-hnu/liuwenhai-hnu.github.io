@@ -58,8 +58,13 @@ export const projectsData = [
     ],
     techStack: ["Kria K26", "Zynq", "Linux / PetaLinux", "时钟配置", "多路电源监测"],
     links: [],
-    /* TODO: 放入不涉密的板子实拍图，如 assets/images/projects/ihep-board.jpg */
-    images: []
+    images: [
+      {
+        src: "assets/images/projects/ihep-board.jpg",
+        alt: "在高能所参与联调的 FPGA 电子学板卡实拍",
+        caption: "中国科学院高能物理研究所 · FPGA 电子学平台联调"
+      }
+    ]
   },
   {
     id: "vla-robot-insertion",
