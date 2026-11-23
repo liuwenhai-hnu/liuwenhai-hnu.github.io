@@ -14,10 +14,10 @@ export const projectsData = [
     period: "2026.10 – 2026.11",
     role: "个人学习项目（AI 辅助 + 自检复核）",
     title: "Verilog RTL 设计与功能验证实践",
-    summary: "围绕基础数字模块构建可自检验证流程，结合故障注入与波形分析核对计数器的阈值触发时序。",
+    summary: "用自检 Testbench 验证加法器，并用 Vivado 波形核对事件计数器的阈值触发与同步清零。",
     highlights: [
       "完成 MUX、Decoder、Comparator、全加器、4 位行波进位加法器（RCA4）及事件计数器等 RTL 设计与 Vivado 综合仿真，覆盖组合逻辑、异步复位、同步清零与饱和计数。",
-      "为 RCA4 构建自检 Testbench，完整遍历 A、B、Cin 共 512 组输入；通过故障注入捕获 128 组失配，复核验证平台对功能缺陷的检出能力。",
+      "RCA4 自检 Testbench 遍历 A、B、Cin 共 512 组输入，正常版全部通过，故障注入版检出 128 组失配。",
       "用 Testbench 和波形验证异步复位、同步清零、饱和计数与阈值触发。4 位版本按更新前的 count 判断阈值，trigger 在第 4 个有效事件采样沿后置位。"
     ],
     metrics: [
@@ -30,9 +30,12 @@ export const projectsData = [
       // TODO: 如有开源仓库，取消注释填写 url
       // { label: "GitHub 仓库", url: "https://github.com/liuwenhai-hnu/...", primary: false }
     ],
-    /* TODO: 将仿真波形图、自检日志图放入 assets/images/projects/ 后填入即可自动展示 */
     images: [
-      // { src: "assets/images/projects/rtl-wave-counter.png", alt: "事件计数器时序波形分析", caption: "定位 trigger 延后一拍现象的仿真波形" }
+      {
+        src: "assets/images/projects/event-counter-4bit-vivado.png",
+        alt: "Vivado 中 4 位事件计数器的仿真波形",
+        caption: "阈值为 3。第三个有效采样沿后 count 为 3，trigger 在第四个沿后置位。clear 被时钟采样后，count 和 trigger 同步清零。"
+      }
     ]
   },
   {
