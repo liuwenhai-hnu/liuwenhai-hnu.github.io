@@ -23,6 +23,23 @@ function projectCard(project, openLightbox) {
   return card;
 }
 
+function explorationCard(project, openLightbox) {
+  const card = element('article', 'exploration-card');
+  const meta = element('div', 'project-meta');
+  meta.append(element('span', 'tag', project.tag), element('span', 'project-period', project.period));
+  card.append(
+    meta,
+    element('h4', '', project.title),
+    element('p', 'project-role', project.role),
+    element('p', 'project-summary', project.summary),
+  );
+  if (project.images?.length) {
+    card.append(renderGallery(project.images, openLightbox));
+  }
+  card.append(list(project.techStack, 'chips'), links(project.links));
+  return card;
+}
+
 export function renderProjects(projects, categories, openLightbox) {
   const { root, content } = section('projects', '03', 'PROJECTS / 工程与探索', '从数字逻辑到跨界原型');
   const visible = projects.filter(project => project.enabled);
@@ -69,8 +86,30 @@ export function renderProjects(projects, categories, openLightbox) {
   function render(index) {
     rendered = index;
     panel.setAttribute('aria-labelledby', controls[index].id);
-    const cards = groups[index].items.map(project => projectCard(project, openLightbox));
-    panel.replaceChildren(...(cards.length ? cards : [element('p', '', '项目整理中。')]));
+    const items = groups[index].items;
+    if (!items.length) {
+      panel.replaceChildren(element('p', '', '项目整理中。'));
+      return;
+    }
+    const core = items.filter(item => item.tier !== 'exploration');
+    const explorations = items.filter(item => item.tier === 'exploration');
+    const nodes = core.map(project => projectCard(project, openLightbox));
+    if (explorations.length) {
+      const group = element('div', `exploration-group${core.length ? ' has-core' : ''}`);
+      if (core.length) {
+        const header = element('div', 'exploration-header');
+        header.append(
+          element('p', 'eyebrow', 'EXPLORATIONS / 黑客松与跨界作品'),
+          element('p', 'exploration-note', '限时黑客松与创作挑战赛中的快速原型交付'),
+        );
+        group.append(header);
+      }
+      const grid = element('div', 'exploration-grid');
+      grid.append(...explorations.map(project => explorationCard(project, openLightbox)));
+      group.append(grid);
+      nodes.push(group);
+    }
+    panel.replaceChildren(...nodes);
   }
 
   async function switchTo(index) {

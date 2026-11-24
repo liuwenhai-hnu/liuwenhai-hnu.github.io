@@ -9,8 +9,8 @@ function archive(profile) {
   for (const [label, value] of [
     ['院校', profile.school],
     ['专业', profile.major],
-    ['求职方向', profile.seeking.direction],
-    ['意向城市', profile.seeking.cities],
+    ['关注方向', profile.seeking.direction],
+    ['常居城市', profile.seeking.cities],
     ['GitHub', profile.contact.githubHandle],
   ]) {
     if (!value) continue;
@@ -29,8 +29,9 @@ export function renderAbout(profile, openLightbox) {
   const narrative = element('div', 'about-copy');
   for (const paragraph of about.paragraphs) narrative.append(element('p', '', paragraph));
   const education = element('div', 'education');
+  const eduTitle = [profile.school, profile.college, profile.major].filter(Boolean).join(' · ');
   education.append(
-    element('strong', '', `${profile.school} · ${profile.major}`),
+    element('strong', '', eduTitle),
     element('p', '', profile.graduation),
     element('p', '', about.courses.join(' / ')),
   );

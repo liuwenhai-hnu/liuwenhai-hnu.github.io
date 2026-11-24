@@ -3,16 +3,19 @@ export const profileData = {
   watermark: "LIUWENHAI",
   monogram: "LWH",
   school: "湖南大学",
+  college: "物理与微电子科学学院",
   major: "电子科学与技术 · 本科",
   classYear: "2028 届",
   archiveId: "HNU-EE-2028",
   graduation: "2024.09 – 2028.06（2028 届）",
+  // 简历 PDF 静默开关：放好文件（如 assets/resume.pdf）并填入路径后，首屏与页脚会自动显示下载入口；留空则隐藏
+  resumePdf: "",
   seeking: {
-    active: true,
-    badgeText: "求职中 · 数字 IC 前端（RTL）/ FPGA / 功能验证实习",
+    active: false,
+    badgeText: "数字 IC 前端（RTL）/ FPGA / 功能验证",
     cities: "深圳",
-    direction: "数字 IC 前端 · RTL / 功能验证",
-    availability: "到岗时间以学校安排为准"
+    direction: "数字 IC 前端 · RTL / FPGA / 功能验证",
+    availability: ""
   },
   hero: {
     keywords: "电子科学与技术 / RTL & FPGA / AI & 具身智能跨界探索",
@@ -23,10 +26,10 @@ export const profileData = {
   about: {
     title: "把硬件做扎实，用 AI 加速探索",
     paragraphs: [
-      "我是刘汶海，湖南大学电子科学与技术专业 2028 届本科生，目前聚焦数字 IC 前端设计（RTL）、FPGA 开发与数字 IC 功能验证方向，持续夯实数字逻辑、硬件描述与仿真调试基础。",
-      "我在中科院高能物理研究所参与过 FPGA 板级联调，也参与了机械臂真机实验。在湖南大学金融科技协会和具身智能训练营，我分别参与黑客松组织和学员技术支持。"
+      "我是刘汶海，湖南大学物理与微电子科学学院电子科学与技术专业 2028 届本科生。大一由金融学转入电子科学与技术后，目前聚焦数字 IC 前端设计（RTL）、FPGA 开发与功能验证方向，持续夯实数字逻辑、硬件描述与仿真调试基础。",
+      "课内之外，我也在真实科研与跨界场景里边做边学——参与过中科院高能物理研究所 CEPC 通用板 FPGA 联调和真实机械臂闭环实验，也在湖南大学金融科技协会（HFT）和达摩院 × Datawhale 具身智能训练营参与黑客松组织与学员技术支持。"
     ],
-    courses: ["数字电子技术", "模拟电子技术", "电路", "信号与系统", "微机原理"],
+    courses: ["数字电子技术", "模拟电子技术", "电路", "信号与系统", "微机原理", "固体物理", "半导体物理"],
     stats: [
       { value: "2028", label: "湖南大学电科本科" },
       { value: "512组", label: "RTL 自检遍历验证" },

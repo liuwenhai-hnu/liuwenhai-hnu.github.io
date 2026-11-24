@@ -29,6 +29,13 @@ export function renderHero(profile) {
     link(entry.primaryCta.label, entry.primaryCta.href, 'button primary'),
     link(entry.secondaryCta.label, entry.secondaryCta.href, 'button outline'),
   );
+  if (profile.resumePdf) {
+    const resume = link('下载简历 PDF', profile.resumePdf, 'button outline');
+    resume.setAttribute('download', '');
+    resume.target = '_blank';
+    resume.rel = 'noopener noreferrer';
+    actions.append(resume);
+  }
   inner.append(element('p', 'eyebrow hero-keywords', entry.keywords), title, accent, description, actions);
   hero.append(watermark, inner, link('向下滚动', '#about', 'hero-scroll'));
   return hero;

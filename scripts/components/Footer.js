@@ -17,15 +17,22 @@ export function renderFooter(profile, year) {
   intro.append(element('p', 'eyebrow', 'CONTACT / 联系'), heading, element('p', '', metaLine));
   const contacts = element('dl', 'contacts');
   const { contact } = profile;
-  for (const [label, value, href] of [
+  for (const [label, value, href, isDownload] of [
     ['邮箱', contact.email], ['手机', contact.phone], ['微信', contact.wechat],
     ['GitHub', contact.githubHandle, contact.github],
+    ['简历', profile.resumePdf ? '下载简历 PDF' : '', profile.resumePdf, true],
   ]) {
     if (!value) continue;
     const row = element('div');
     const detail = element('dd');
     if (href) {
-      detail.append(link(value, href, 'text-link'));
+      const anchor = link(value, href, 'text-link');
+      if (isDownload) {
+        anchor.setAttribute('download', '');
+        anchor.target = '_blank';
+        anchor.rel = 'noopener noreferrer';
+      }
+      detail.append(anchor);
     } else {
       const copy = button('复制', 'copy-button');
       copy.dataset.copy = value;
