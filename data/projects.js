@@ -50,16 +50,16 @@ export const projectsData = [
     title: "CEPC 触发通用板 FPGA 电子学平台联调与板级验证",
     summary: "在赵京周老师团队参与基于 Zynq / Kria K26 的科研电子学板卡集成、时钟/电源调试及高速链路测试。",
     highlights: [
-      "参与 CEPC 触发通用板（ATCA 平台）的 Kria K26 集成与 PetaLinux 2025.2 工程/rootfs/BSP 报错排查，并于 2026 年 9 月参与项目阶段汇报。",
-      "参与 4 颗 Si570 与 3 颗 ZL30274 时钟器件的 I²C 配置、通道选通与起振异常排查；参与 MAX34451（PMBus）多路电源监测复测与 MGTAVCC 补焊后测量确认。",
-      "参与 DDR 功能测试与 GTY 高速收发器内部环回测试，并在现场配合接触高速差分 RX P/N 极性反接与信号完整性异常定位。"
+      "参与 Zynq 预研、8 月 Kria K26 / ATCA 现场外围器件调试及 9 月 CEPC 通用板项目汇报，接触 Vivado 与 Linux / PetaLinux 环境配置。",
+      "使用 Linux i2c-tools 进行从机扫描、寄存器读写及 TCA9548 通道选通，通过不同 Zynq 平台交叉测试排查通信异常，定位并复测 MLX120 接线问题。",
+      "参与 MLX120、MLX040 电源配置及 MAX34451 多路电源监测，结合 PMBus 寄存器读回与电压实测复核；参与 Si570、ZL30274 时钟配置及起振异常排查。"
     ],
     metrics: [
       { label: "科研平台", value: "CEPC 通用板 / Kria K26" },
-      { label: "时钟与电源", value: "Si570 / ZL30274 / MAX34451" },
-      { label: "系统与接口", value: "PetaLinux / DDR / PMBus / GTY" }
+      { label: "板级定位", value: "i2c-tools / TCA9548 / MLX120" },
+      { label: "电源与时钟", value: "MAX34451 / Si570 / ZL30274" }
     ],
-    techStack: ["Kria K26", "Zynq", "PetaLinux", "Si570 / ZL30274", "MAX34451", "DDR / GTY"],
+    techStack: ["Kria K26", "Zynq", "i2c-tools / TCA9548", "PMBus / MAX34451", "Si570 / ZL30274", "PetaLinux"],
     links: [],
     images: [
       {
@@ -78,9 +78,9 @@ export const projectsData = [
     period: "2026.07 – 2026.11",
     role: "湖南大学刘鑫琦老师课题组 · GAP-VLA 真机实验",
     title: "GAP-VLA 机械臂精密装配真机实验与系统排障",
-    summary: "面向真实机械臂精密装配与插入任务，参与 RGB-D 空间位姿测量验证及多相机系统稳定性排障。",
+    summary: "面向真实机械臂精密装配与插入任务，负责 RGB-D 空间位姿测量验证并参与多相机系统排障。",
     highlights: [
-      "参与验证 RGB-D 2D→3D 位姿测量链路：结合 RGB 轮廓、深度反投影、RANSAC 平面拟合与射线-平面求交，恢复三维角点并构建局部坐标系。",
+      "负责 RGB-D 2D→3D 位姿测量模块的方案设计、AI 辅助实现与实验验证：结合 RGB 轮廓、深度反投影、RANSAC 平面拟合及射线-平面求交，恢复三维角点并构建局部坐标系。",
       "协助排查多相机视频缓存延迟、感知抖动及任务异常恢复等真机系统问题，并参与发明专利《一种位姿反馈引导的视觉语言机器人装配方法及系统》技术交底编制（申请准备中）。"
     ],
     metrics: [
