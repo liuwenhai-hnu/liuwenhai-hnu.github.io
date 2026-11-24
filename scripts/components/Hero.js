@@ -31,7 +31,7 @@ export function renderHero(profile) {
   );
   if (profile.resumePdf) {
     const resume = link('下载简历 PDF', profile.resumePdf, 'button outline');
-    resume.setAttribute('download', '');
+    resume.setAttribute('download', '刘汶海-简历.pdf');
     resume.target = '_blank';
     resume.rel = 'noopener noreferrer';
     actions.append(resume);

@@ -28,7 +28,7 @@ export function renderFooter(profile, year) {
     if (href) {
       const anchor = link(value, href, 'text-link');
       if (isDownload) {
-        anchor.setAttribute('download', '');
+        anchor.setAttribute('download', '刘汶海-简历.pdf');
         anchor.target = '_blank';
         anchor.rel = 'noopener noreferrer';
       }

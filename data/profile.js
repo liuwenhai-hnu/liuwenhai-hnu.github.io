@@ -9,7 +9,7 @@ export const profileData = {
   archiveId: "HNU-EE-2028",
   graduation: "2024.09 – 2028.06（2028 届）",
   // 简历 PDF 静默开关：放好文件（如 assets/resume.pdf）并填入路径后，首屏与页脚会自动显示下载入口；留空则隐藏
-  resumePdf: "",
+  resumePdf: "assets/resume.pdf",
   seeking: {
     active: false,
     badgeText: "数字 IC 前端（RTL）/ FPGA / 功能验证",
