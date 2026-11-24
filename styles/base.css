@@ -27,7 +27,7 @@ a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; cursor: pointer; }
 :focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 4px; }
 .section-dark :focus-visible { outline-color: var(--border); }
-:target { scroll-margin-top: var(--nav-height); }
+:target, .section, .site-footer { scroll-margin-top: var(--nav-height); }
 
 :root {
   --nav-height: 72px;

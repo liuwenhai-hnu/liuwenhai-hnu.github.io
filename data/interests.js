@@ -20,7 +20,7 @@ export const interestsData = {
     updatedAt: '2026.11',
     items: [
       '练习 Verilog 时序逻辑和自检验证',
-      '准备数字 IC 前端实习，深圳优先',
+      '准备数字 IC 前端实习（深圳）',
       '用 AI 工具探索工程复核与原型开发',
     ],
   },

@@ -11,8 +11,10 @@ export function renderFooter(profile, year) {
   const intro = element('div');
   const heading = element('h2', '', profile.name);
   heading.id = 'contact-title';
-  intro.append(element('p', 'eyebrow', 'CONTACT / 联系'), heading,
-    element('p', '', `${profile.school} · ${profile.major}`));
+  const metaLine = [profile.school, profile.major.split(' · ')[0], profile.classYear, profile.seeking?.cities]
+    .filter(Boolean)
+    .join(' · ');
+  intro.append(element('p', 'eyebrow', 'CONTACT / 联系'), heading, element('p', '', metaLine));
   const contacts = element('dl', 'contacts');
   const { contact } = profile;
   for (const [label, value, href] of [
