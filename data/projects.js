@@ -52,14 +52,14 @@ export const projectsData = [
     highlights: [
       "参与 CEPC 触发通用板（ATCA 平台）的 Kria K26 集成与 PetaLinux 2025.2 工程/rootfs/BSP 报错排查，并于 2026 年 9 月参与项目阶段汇报。",
       "参与 4 颗 Si570 与 3 颗 ZL30274 时钟器件的 I²C 配置、通道选通与起振异常排查；参与 MAX34451（PMBus）多路电源监测复测与 MGTAVCC 补焊后测量确认。",
-      "参与 GTY 高速收发器内部环回测试，并在现场配合接触高速差分 RX P/N 极性反接与信号完整性异常定位。"
+      "参与 DDR 功能测试与 GTY 高速收发器内部环回测试，并在现场配合接触高速差分 RX P/N 极性反接与信号完整性异常定位。"
     ],
     metrics: [
       { label: "科研平台", value: "CEPC 通用板 / Kria K26" },
       { label: "时钟与电源", value: "Si570 / ZL30274 / MAX34451" },
-      { label: "系统与接口", value: "PetaLinux / I²C / PMBus / GTY" }
+      { label: "系统与接口", value: "PetaLinux / DDR / PMBus / GTY" }
     ],
-    techStack: ["Kria K26", "Zynq", "PetaLinux", "Si570 / ZL30274", "MAX34451", "GTY 环回"],
+    techStack: ["Kria K26", "Zynq", "PetaLinux", "Si570 / ZL30274", "MAX34451", "DDR / GTY"],
     links: [],
     images: [
       {
@@ -78,10 +78,10 @@ export const projectsData = [
     period: "2026.07 – 2026.11",
     role: "湖南大学刘鑫琦老师课题组 · GAP-VLA 真机实验",
     title: "GAP-VLA 机械臂精密装配真机实验与系统排障",
-    summary: "面向真实机械臂精密装配与插入任务，参与 RGB-D 空间位姿验证及多相机系统稳定性排障。",
+    summary: "面向真实机械臂精密装配与插入任务，参与 RGB-D 空间位姿测量验证及多相机系统稳定性排障。",
     highlights: [
-      "参与 RGB-D 视觉 2D→3D 空间位姿恢复与装配板/目标框三维坐标系误差分析，处理边界深度污染与平面几何恢复问题。",
-      "协助排查多相机视频缓存延迟、相机不同步、遮挡抖动及机械臂任务异常恢复等真机系统问题，并参与实验数据整理与脚本迭代。"
+      "参与验证 RGB-D 2D→3D 位姿测量链路：结合 RGB 轮廓、深度反投影、RANSAC 平面拟合与射线-平面求交，恢复三维角点并构建局部坐标系。",
+      "协助排查多相机视频缓存延迟、感知抖动及任务异常恢复等真机系统问题，并参与发明专利《一种位姿反馈引导的视觉语言机器人装配方法及系统》技术交底编制（申请准备中）。"
     ],
     metrics: [
       { label: "实验载体", value: "RGB-D + 真实机械臂" },

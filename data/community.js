@@ -24,8 +24,13 @@ export const communityData = [
     highlights: [
       '协助学员完成虚拟机配置与软件依赖排障，整理高频配置问题与避坑说明支持交付。',
     ],
-    // TODO: 后续拿到「助教说：刘汶海」高清截图或官推链接后填入此处
-    images: [],
+    images: [
+      {
+        src: 'assets/images/community/damo-interview.jpg',
+        alt: '阿里达摩院 × Datawhale 具身智能训练营湖南大学站官方「助教说」刘汶海专访',
+        caption: '达摩院 × 乐云具身 × Datawhale 湖南大学站 · 官方「助教说」专访',
+      },
+    ],
     links: [{ label: '查看官方专访', url: '' }],
   },
 ];

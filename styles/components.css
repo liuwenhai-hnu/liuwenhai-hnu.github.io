@@ -361,9 +361,11 @@
   .gallery-stack .media-frame:not(:first-child) img { height: min(13vw, 120px); }
 }
 
+.community-grid { align-items: start; }
 .community-card { background: var(--bg-dark-card); }
 .community-card .highlights, .community-card > p:not(.eyebrow) { color: var(--text-light-muted); }
 .community-card .media, .community-card .actions { margin-top: 16px; }
+.community-card .gallery-single img { max-height: 280px; }
 .interest-layout { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: start; gap: 20px; }
 .interest-items { display: grid; gap: 12px; }
 .interest-card h3 { margin-bottom: 6px; }
